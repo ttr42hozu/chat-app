@@ -1,7 +1,8 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">Tom</a>
-    <%# リンク先はとりあえず#にしておく %>
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+    <%# レイアウト作成時 リンク先はとりあえず#にしておく(変更済み) %>
+    <%# method: :get 今回はなんで書かない？ %>
   </div>
   <div class="create-room">
     <a href="#">チャットを作成する</a>

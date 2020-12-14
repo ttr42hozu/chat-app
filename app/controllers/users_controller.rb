@@ -12,7 +12,6 @@ def update
     render :edit
   end
 
-  # current_userメソッドこれなに
 end
 
 private
