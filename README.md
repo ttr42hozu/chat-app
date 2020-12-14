@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ...
 
+<!-- DB設計を記載 -->
 # テーブル設計
 
 ## users テーブル
@@ -32,6 +33,7 @@ Things you may want to cover:
 | name     | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
+<!-- null: falseとは -->
 
 ### Association
 
@@ -57,6 +59,7 @@ Things you may want to cover:
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
 | room   | references | null: false, foreign_key: true |
+<!-- 外部キー制約？foreign_key: true -->
 
 ### Association
 
