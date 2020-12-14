@@ -6,13 +6,11 @@ end
 
 def update
   if current_user.update(user_params)
-    # current_userメソッドこれなに
+    # current_userメソッドはサインインしてるユーザーの情報を取得
     redirect_to root_path
   else
     render :edit
   end
-
-  # current_userメソッドこれなに
 end
 
 private
