@@ -12,13 +12,45 @@
 
 .side-bar-header {
   height: 100px;
-  padding: 0, 20px;
+  padding: 0 20px;
+  /* paddingは0, 20pxのように , は必要ない */
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header-name a {
+  /* header-nameではなくheader-name a をセレクタにしないとだめ */
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-room a {
+  font-size: 10px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
 
 .rooms {
   background-color: #2F3E51;
   height: calc(100vh - 100px);
-  padding: 0, 20px;
+  padding: 0 20px;
+  overflow: scroll;
+  /* overflow: scroll;で中身をスクロールできる */
+}
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.room-name a {
+  color: white;
+  text-decoration: none;
 }
 
 .chat {
@@ -30,18 +62,18 @@
 
 .chat-header {
   height: 100px;
-  padding: 0, 40px;
+  padding: 0 40px;
 }
 
 .messages {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
-  padding-top: 46px, 40px, 0;
+  padding-top: 46px 40px 0;
 }
 
 
 .form {
   background-color: #DDD;
   height: 90px;
-  padding: 20px, 0;
+  padding: 20px 40px;
 }
