@@ -21,5 +21,6 @@ module ChatApp
       g.helper false
       g.test_framework false
     end
+    # 今回は不要なファイルを生成しないように設定
   end
 end
