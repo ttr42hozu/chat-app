@@ -6,7 +6,8 @@
     </div>
     <div class="message-date">
       <!-- 投稿した時刻を出力する -->
-      <%= message.created_at %>
+      <%= l message.created_at %>
+      <%# lメソッドはapplication.rbとja.ymlに設定した上で記述すると表示時刻が日本時刻に （設定後はサーバー再起動）%>
     </div>
   </div>
   <div class="lower-message">
