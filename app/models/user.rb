@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
+  # nameにバリデーションを記述するのはnameはもともとあるカラムではないため（もともとあるカラムはデフォルトで設定済み）
 
   has_many :room_users
   has_many :rooms, through: :room_users
