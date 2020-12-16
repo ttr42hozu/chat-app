@@ -1,0 +1,19 @@
+<div class="message">
+  <div class="upper-message">
+    <div class="message-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= message.user.name %>
+    </div>
+    <div class="message-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= l message.created_at %>
+      <%# lメソッドはapplication.rbとja.ymlに設定した上で記述すると表示時刻が日本時刻に （設定後はサーバー再起動）%>
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= message.content %>
+    </div>
+  </div>
+</div>

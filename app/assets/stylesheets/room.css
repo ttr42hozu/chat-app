@@ -122,3 +122,8 @@ select {
   height: 80px;
   width: 100%;
 }
+
+.field_with_errors {
+  display: contents;
+}
+/* class属性にfield_with_errorsという値を持っているdivがエラー時にレイアウトが崩れないようにする記述 */
