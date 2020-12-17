@@ -29,6 +29,7 @@ RSpec.describe Message, type: :model do
 
     it 'roomが紐付いていないと保存できないこと' do
       @message.room = nil
+      # 紐づいているroomの値に空の値を入れている
       @message.valid?
       expect(@message.errors.full_messages).to include("Room must exist")
     end
