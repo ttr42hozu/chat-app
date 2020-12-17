@@ -20,7 +20,9 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+# ↑もともとコメントアウトされていたもの。supportを使うにはまずはコメントアウトを外さなければならない
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -32,10 +34,12 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 I18n.locale = "en"
-
 # エラーメッセージを英語で出力させるため（時刻を日本語フォーマットへ変更した際に、標準の言語を日本語にしたらしい）
 
 RSpec.configure do |config|
+  config.include SignInSupport
+  # supportのsign_in_support（サポートモジュール）を使うための記述
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
